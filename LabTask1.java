@@ -1,39 +1,24 @@
-public class Tables {
+/*
+* Author :- Harshit K Agnihotri
+* Date:- 22-07-2020
+ */
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-        
-	}
-		JTable table;
-		public table() {
-			setlayout(new FlowLayout());
-			String[] colums = {"data type","size in bits","size in bytes","range"};
-			Object[][] data = {
-					{"byte"," "," ","from to"},
-					{"short"," "," ","from to"},
-					{"int"," "," ","from to"},
-					{"long"," "," ","from to"},
-					{"float"," "," ","from to"},
-					{"double"," "," ","from to"},
-					{"char"," "," ","from to"},
-					{"boolean","*","*","has and"}
-			};
-			table = new JTable(data,colums);
-			table.setPreferredScrollableViewportSize(new Dimension(500,50));
-			table.setFillsViewportHeight(true);
-			
-			JScrollPane scrollPane = new JScrollPane(table);
-			add(scrollPane);
-		}
-		
-		public static void main(String args[]) {
-			table gui = new table();
-			gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			gui.setSize(600,200);
-			gui.setVisible(true);
-			gui.setTitle("DATA TYPES");
-		}
+
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Data types\t\t Size in Bits\t\tSize in Bytes\t\tRange");
+        System.out.println("byte\t"+Byte.size+"\t"+Byte.size/8 + "\tfrom" + Byte.MIN_VALUE + "to" + Byte.MAX_VALUE);
+        System.out.println("Char\t"+Character.size+"\t"+Character.size/8 + "\tfrom" + Character.MIN_VALUE + "to" + Character.MAX_VALUE);
+        System.out.println("Short\t"+Short.size+"\t"+Short.size/8 + "\tfrom" + Short.MIN_VALUE + "to" + Short.MAX_VALUE);
+        System.out.println("Integer\t"+Integer.size+"\t"+Integer.size/8 + "\tfrom" + Integer.MIN_VALUE + "to" + Integer.MAX_VALUE);
+        System.out.println("Long\t"+Long.size+"\t"+Long.size/8 + "\tfrom" + Long.MIN_VALUE + "to" + Long.MAX_VALUE);
+        System.out.println("Float\t"+Float.size+"\t"+Float.size/8 + "\tfrom" + Float.MIN_VALUE + "to" + Float.MAX_VALUE);
+        System.out.println("Double\t"+Double.size+"\t"+Double.size/8 + "\tfrom" + Double.MIN_VALUE + "to" + Double.MAX_VALUE);
+        System.out.println("Boolean\t\t\t"+"\t\t\t" + "\t\t\tfrom" + Boolean.false + "to" + Boolean.true);
+
+
+    }
 }
